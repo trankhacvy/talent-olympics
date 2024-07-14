@@ -9,7 +9,6 @@ import {
 import { LAMPORTS_PER_SOL, PublicKey, Transaction } from "@solana/web3.js";
 import WhitelistGatedTokenSaleProgram from "@/lib/program";
 import { NextResponse } from "next/server";
-import { prepareTransaction } from "@/lib/transaction";
 import { connection } from "@/lib/connection";
 
 const Response = NextResponse;
@@ -107,7 +106,6 @@ export const POST = async (req: Request) => {
     const program = new WhitelistGatedTokenSaleProgram();
 
     const ix = await program.getMintTokenTx(minter, amount);
-    const tx = await prepareTransaction([ix], minter);
 
     const transaction = new Transaction();
     transaction.add(ix);

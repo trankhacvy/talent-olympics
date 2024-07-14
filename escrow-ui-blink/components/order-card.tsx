@@ -80,7 +80,7 @@ export default function OrderCard({ escrow }: { escrow: Escrow }) {
           <TakeOrderDialog escrow={escrow} />
         )}
         <a
-          href={`https://dial.to/?action=solana-action:${encodeURI(
+          href={`https://dial.to/devnet?action=solana-action:${encodeURI(
             `${process.env.NEXT_PUBLIC_FE_URL!}/api/order/${escrow.address.toBase58()}`
           )}`}
           target="_blank"

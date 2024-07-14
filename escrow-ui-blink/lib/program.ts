@@ -1,10 +1,10 @@
 import { AnchorProvider, BN, Program } from "@coral-xyz/anchor"
 import { ASSOCIATED_TOKEN_PROGRAM_ID, getAssociatedTokenAddressSync, TOKEN_PROGRAM_ID } from "@solana/spl-token"
-import { clusterApiUrl, Connection, PublicKey, SystemProgram } from "@solana/web3.js"
+import { Connection, PublicKey, SystemProgram } from "@solana/web3.js"
 import { ESCROW_PROGRAM_ID } from "@/config/constant"
 import { AnchorEscrow, IDL } from "@/types/escrow"
 
-export const connection = new Connection(clusterApiUrl("devnet"))
+export const connection = new Connection(process.env.NEXT_PUBLIC_RPC_URL!)
 
 export class EscrowProgram {
   program: Program<AnchorEscrow>

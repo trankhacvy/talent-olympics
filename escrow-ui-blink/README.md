@@ -1,97 +1,68 @@
-# Solana NextJS Starter
+# Solana Escrow UI
 
-![Project intro image](./free-project-logo.png)
+**Description**
 
-## Tech stack
+This Next.js application provides a user-friendly interface for interacting with the [Anchor Escrow smart contract](https://github.com/deanmlittle/anchor-escrow-2024) on the Solana blockchain.
 
-- **[Next.js](https://nextjs.org/)**
-- **[Tailwind CSS](https://tailwindcss.com/)**
-- **[Radix UI](https://www.radix-ui.com/)**
-- **[Solana Wallet Adapter](https://github.com/solana-labs/wallet-adapter)**
-- **[@solana/web3.js Solana JavaScript SDK](https://solana-labs.github.io/solana-web3.js/)**
-- **[Tailwind Variants](https://www.tailwind-variants.org/)**
-- **[ESlint](https://eslint.org/)**
-- **[Prettier](https://prettier.io/)**
-- **[Storybook](https://storybook.js.org/)**
-- **[Jest](https://jestjs.io/)**
-- **[React Testing Library](https://testing-library.com/react)**
-- **[Playwright](https://playwright.dev/)**
-- **[Conventional commits](https://www.conventionalcommits.org/)**
-- **[Renovate BOT](https://www.whitesourcesoftware.com/free-developer-tools/renovate)**
-- **[Semantic Release](https://github.com/semantic-release/semantic-release)**
+**Features**
 
-## 🎯 Getting Started
+- Display all active escrows.
+- Maker can create new escrow.
+- Maker can close the escrow and get the deposit back.
+- Taker can take the escrow.
+- Display total escrow and total value locked
+- Support Blink for each escrow
 
-To get started with this boilerplate, follow these steps:
+## Video demo
 
-1. Clone repository:
+[![Watch the video](https://cdn.loom.com/sessions/thumbnails/c4c88127ccff4da0b17cd01fae4bd38d-with-play.gif)](https://www.loom.com/share/c4c88127ccff4da0b17cd01fae4bd38d?sid=500544fb-fa78-4a7f-b246-1eca6b303905)
 
-```bash
-git clone git@github.com:trankhacvy/solana-nextjs-starter.git my-awesome-solana-dapp
-```
+## Try it
 
-2. Install the dependencies:
+Escrow UI: [https://talent-olympics-escrow-ui.vercel.app/](https://talent-olympics-escrow-ui.vercel.app/)
 
-```bash
-yarn install --frozen-lockfile
-```
+**Getting Started**
 
-3. Run the development server:
+1. **Prerequisites:**
 
-```bash
-yarn dev
-```
+   - Node.js and npm (or yarn) installed on your system.
+   - A Solana wallet (e.g., Phantom) with some SOL tokens for transaction fees.
+   - Basic understanding of Next.js and web development.
+   - Familiarity with Solana and smart contracts (recommended).
 
-4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Clone the repository:**
 
-## 🚀 Deployment
+   ```bash
+   git clone git@github.com:trankhacvy/talent-olympics.git
+   ```
 
-One click deployment
+3. **Install dependencies:**
 
-[![Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/trankhacvy/solana-nextjs-starter)
+   ```bash
+   cd talent-olympics/escrow-ui-blink
+   npm install (or yarn install)
+   ```
 
-## 🤝 How to Contribute
+4. **Configure environment variables:**
 
-I highly appreciate contributions from the community! If you'd like to contribute, please adhere to the following guidelines:
+   Create a `.env.local` file at the project root (ignore it with `.gitignore`) and add the following, replacing placeholders with your actual values:
 
-1. Fork the repository.
-2. Create a new branch with a clear and descriptive name that reflects the nature of your changes.
-3. Implement your modifications and commit them following the Conventional Commits format.
-4. Push your changes to your forked repository.
-5. Open a pull request, and I will carefully review your changes.
+   ```
+   NEXT_PUBLIC_RPC_URL=devnet (or mainnet-beta)
+   NEXT_PUBLIC_FE_URL=http://localhost:3000
+   ```
 
-## 💕 Support
+   - `NEXT_PUBLIC_RPC_URL`: your RPC.
+   - `NEXT_PUBLIC_FE_URL`: Your app URL
 
-Drop this repo ⭐ star
+5. **Run the application:**
 
-## 📜 License
+   ```bash
+   npm run dev (or yarn dev)
+   ```
 
-This project is licensed under the MIT License. For more information, see the [LICENSE](./LICENSE) file.
+   This will start the development server, usually accessible at http://localhost:3000 by default.
 
-## Hall of fame
+**License**
 
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tbody>
-    <tr>
-      <td align="center" valign="top" width="14.28%"><a href="https://twitter.com/trankhac_vy"><img src="https://avatars.githubusercontent.com/u/8068926?v=4?s=100" width="100px;" alt="Khac Vy"/><br /><sub><b>Khac Vy</b></sub></a><br /><a href="https://github.com/trankhacvy/solana-nextjs-starter/commits?author=trankhacvy" title="Code">💻</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com"><img src="https://static.thenounproject.com/png/4145382-200.png" style="background-color:white;" width="100px;" alt="You"/><br /><sub><b>You</b></sub></a><br /><a href="#infra-jjablonski-it" title="">💻</a></td>
-    </tr>
-  </tbody>
-  <tfoot>
-    <tr>
-      <td align="center" size="13px" colspan="7">
-        <img src="https://raw.githubusercontent.com/all-contributors/all-contributors-cli/1b8533af435da9854653492b1327a23a4dbd0a10/assets/logo-small.svg">
-          <a href="https://all-contributors.js.org/docs/en/bot/usage">Add your contributions</a>
-        </img>
-      </td>
-    </tr>
-  </tfoot>
-</table>
-
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
+This project is licensed under the MIT License (see LICENSE file).

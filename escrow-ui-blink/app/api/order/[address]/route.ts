@@ -156,6 +156,7 @@ export const POST = async (req: Request, context: { params: Params }) => {
 
     const transaction = new Transaction()
     transaction.add(ix)
+    
     transaction.feePayer = taker
     transaction.recentBlockhash = (await connection.getLatestBlockhash()).blockhash
 

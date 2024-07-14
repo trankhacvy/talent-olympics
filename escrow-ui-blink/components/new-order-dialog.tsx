@@ -95,16 +95,6 @@ export default function NewOrderDialog() {
         <Button startDecorator={<PlusIcon />}>New Escrow</Button>
       </AlertDialogTrigger>
       <AlertDialogContent className="max-w-xl">
-        <button
-          onClick={() =>
-            toast({
-              title: "Your order has been created successfully",
-              variant: "success",
-            })
-          }
-        >
-          Ok
-        </button>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
             <AlertDialogHeader>
