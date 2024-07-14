@@ -1,0 +1,1 @@
+export const ESCROW_PROGRAM_ID = "2ciHGJL2wVScCn2RBE4MGYgHaNymtqNeP5sBrfLDoD4Z"
